@@ -1,0 +1,601 @@
+Issue Link,Bug Type,Root Cause,Effect,Rational
+https://github.com/Nerogar/OneTrainer/issues/1429,SB.Data flow Bug,API Misuse (APIM),Crash,"BT: The data flow process inside the matrix mutiplication is not correct
+RC: Used lower level APIs, not build for this task
+ET: Throws Exception Code: 0xC0000005"
+https://github.com/pytorch/pytorch/issues/181610,Initialization Bug,API Misuse (APIM),Crash,"BT: C10D_NCCL_CHECK got incorrect value as the first parameter
+RC: Incorrect functino used ""handles registered via ncclCommWindowRegister() (symmetric registration) require ncclCommWindowDeregister() instead""
+ET: NCCLComm::abort() crashes"
+https://github.com/verl-project/verl/issues/6176,Initialization Bug,Incorrect Model Parameter or Structure (IPS),Hang,"BT: prepare_dynamic_batch missed a parameter dp_group
+RC: dp_group parameter is missing
+ET: permanent NCCL hang"
+https://github.com/pytorch/executorch/issues/19140,API Bug,API Change (APIC),Crash,"BT: Issue in the pytorch api
+RC: Bug in the specific pytorch version ""This issue should be opened in pytorch/pytorch instead.""
+ET: RuntimeError: <weakref at 0x7fda0b097f60"
+https://github.com/pytorch/executorch/issues/19138,API Bug,API Change (APIC),Crash,"BT: Pytorch api issue
+RC: this should be opened against pytorch/pytorch instead
+ET: associative_scan crashes"
+https://github.com/gc-os-ai/pyaptamer/issues/526,Initialization Bug,API Misuse (APIM),Data Corruption,"BT: torch.arange got incorrect parameter
+RC: torch.arange incorrectly used
+ER: Shape mismatch"
+https://github.com/sktime/sktime-mcp/issues/292,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: Logical segments not implemented
+RC: Missed detection task implementation code
+ET: doesnt list detection tasks"
+https://github.com/kornia/kornia/issues/3706,Data Bug,API Misuse (APIM),Crash,"BT: Point data type incorrect
+RC: Incorrect data passed to the API
+ET: Throws TypeError"
+https://github.com/kornia/kornia/issues/3705,Data Bug,API Misuse (APIM),Crash,"BT: Point data type incorrect
+RC: Incorrect data passed to the API
+ET: transform_points crashes"
+https://github.com/kornia/kornia/issues/3704,NMSB.Logic Bugs,Others,Crash,"BT: Added logical checks 
+RC: Missed some conditional checks
+ET: RandomLinearCornerIllumination crash on CUDA input"
+https://github.com/vllm-project/vllm-omni/issues/3097,NMSB.Logic Bugs,Absence of type checking,Crash,"BT: Incorrect logical flow
+RC: first_prompt type not checked
+ET: Throws AttributeError"
+https://github.com/Lightning-AI/litData/issues/811,NMSB.Logic Bugs,Others,Crash,"BT: Incorrect improt statement
+RC: LitFormatter import incorrect (Not related to DL)
+ET: Throws importError"
+https://github.com/unslothai/unsloth/issues/5164,NMSB.Logic Bugs,Others,Crash,"BT: Missed logical implementation 
+RC: Added additional operations
+ET: Throws AssertionError"
+https://github.com/pytorch/executorch/issues/19069,NMSB.Logic Bugs,API Misuse (APIM),Crash,"BT: Missed certain implications 
+RC: _validate_resize_parameters added a new parameter
+ET: Returns Graph result: ERROR."
+https://github.com/sktime/sktime/issues/9991,API Bug,Others,Unknown,"BT: Incorrect API (eval) used for the task
+RC: Not related to DL
+ET: Not specified"
+https://github.com/omega-memory/omega-memory/issues/53,NMSB.Logic Bugs,Others,Crash,"BT: Set OMEGA_RERANKER_PRECISION=int8 in your environment to use it by default.
+RC: Not related to DL
+ET: Throws huggingface_hub.errors.RemoteEntryNotFoundError"
+https://github.com/flagos-ai/FlagGems/issues/2612,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: Incorrect if statement
+RC: Incorrect variable type checked
+ET: Operator crash on nvidia"
+https://github.com/huggingface/lerobot/issues/3433,SB.Control and Sequence Bug,Absence of type checking,Data Corruption,"BT: Control sequence incorrect
+RC: added actions_is_pad condition
+ET: Incorrect loss normalization"
+https://github.com/ultralytics/ultralytics/issues/24306,Initialization Bug,API Misuse (APIM),Crash,"BT: ct.models.MLModel incorrectly initialized
+RC: Added skip_model_load
+ET: CoreML export crashes"
+https://github.com/pytorch/pytorch/issues/181101,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: Missed conditional flow
+RC: Added try catch block
+ET: Incorrect value returned"
+https://github.com/pytorch/pytorch/issues/181097,Initialization Bug,API Misuse (APIM),Crash,"BT: ep.module incorrectly initialized
+RC: check_guards=False works
+ET: Throws AssertionError"
+https://github.com/ModelCloud/GPTQModel/issues/2805,NMSB.Logic Bugs,Structure Inefficiency (SI),Memory Out of Bound,"BT: Code logic incorrect
+RC: Incorrect structure of the code
+ET: gpu memory usage increases until the oom"
+https://github.com/openvinotoolkit/openvino/issues/35445,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: else if condition incorrect
+RC: data type checker incorrect
+ET: Throws Segmentation fault"
+https://github.com/vllm-project/vllm/issues/40437,Initialization Bug,Absence of type checking,Crash,"BT: Precondition (if else) added before initializing self.q_proj
+RC: added precondition check
+ET: Throws RuntimeError: split_with_sizes expects split_sizes to sum exactly to 18"
+https://github.com/vllm-project/vllm-omni/issues/2943,NMSB.Logic Bugs,Others,Crash,"BT: Missed implemention additonal functions
+RC: Not related to DL
+ET: Throws Error: local media path not allowed"
+https://github.com/pytorch/pytorch/issues/180848,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: added test_adaptive_avg_pool2d_flatten_sum function
+RC: Not related to DL
+ET: torch.compile produces wrong results"
+https://github.com/sgl-project/sglang/issues/23193,SB.Data flow Bug,Incorrect Model Parameter or Structure (IPS),Crash,"BT: block_idx initialized in wrong scope
+RC: Not related to DL
+ET: Error executing request"
+https://github.com/huggingface/lerobot/issues/3404,Initialization Bug,Absence of type checking,Incorrect Functionality,"BT: key value incorrectly initialized in loop
+RC: key type not checked
+ET: leaks image PNG temp dirs"
+https://github.com/huggingface/transformers/issues/45491,SB.Control and Sequence Bug,Others,Incorrect Functionality,"BT: attention_mask initialization if condition incorrect
+RC: Not directly related to DL
+ET: Output is nan"
+https://github.com/flagos-ai/FlagGems/issues/2493,NMSB.Logic Bugs,Others,Crash,"BT: added @pytest.mark.skip operation
+RC: Not related to DL
+ET: Throws RecursionError"
+https://github.com/unslothai/unsloth/issues/5087,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: Template value incorrect
+RC: API incorrectly invoked with wrong template
+ET: Completely difference behaviour observed in the thinking mode chat template"
+https://github.com/pytorch/executorch/issues/18971,Initialization Bug,Incorrect Model Parameter or Structure (IPS),Incorrect Functionality,"BT: resolve_arg parameter incorrect RC: resolve_arg parameter incorrect
+ET: reproduces consistently with a small self-contained repro"
+https://github.com/vllm-project/vllm/issues/40080,Others,Incorrect Functionality,Unknown,"BT: _lora_aux_cuda_stream initialized in different scope (wrong if condition)
+RC: Not a part of DL
+ET: generates infinite repetition loops"
+https://github.com/ultralytics/ultralytics/issues/24257,Initialization Bug,API Misuse (APIM),Crash,"BT: path incorrectly initialized
+RC: path value incorrect (wong parameter to function)
+ET: Throws FileNotFoundError"
+https://github.com/fla-org/flash-linear-attention/issues/838,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: if condition incorrect
+RC: cu_seqlens type checking missing
+ET: overwrites user-provided cu_seqlens"
+https://github.com/pytorch/pytorch/issues/180548,SB.Data flow Bug,Unaligned Tensor (UT),Crash,"BT: torch._check() method got wrong data type
+RC: Tensor does not align with the type
+ET: Throws RuntimeError"
+https://github.com/pytorch/pytorch/issues/180486,SB.Control and Sequence Bug,Others,Unknown,"BT: If statement incorrect
+RC: ET: Not specified"
+https://github.com/pytorch/torchtitan/issues/2983,Initialization Bug,Unknown,Incorrect Functionality,"BT: self.ntokens_seen incorrectly initialized 
+RC: Not related to DL
+ET: Token count incorrect"
+https://github.com/roboflow/rf-detr/issues/969,NMSB.Logic Bugs,Unknown,Incorrect Functionality,"BT: Missed implementing certain functionalities
+RC: Not related to bugs in DL
+ET: silently overwrites checkpoint_best_ema.pth"
+https://github.com/sgl-project/sglang/issues/22843,NMSB.Logic Bugs,Others,Crash,"BT: bisheng path incorrect 
+RC: Not related to DL
+ET: Throws FileNotFoundError"
+https://github.com/mlflow/mlflow/issues/22596,NMSB.Logic Bugs,Others,Crash,"BT: Missed certain logical implementations
+RC: Not related to DL
+ET: Throws ERROR: ResolutionImpossible"
+https://github.com/vllm-project/vllm-omni/issues/2804,SB.Logic Bugs,Confusion with Computation Model (CCM),Incorrect Functionality,"BT: Operations after if request.model is not None and request.model != model_name: is incorrect
+RC: Incorrect operation when model does not match
+ET: model mismatch"
+https://github.com/NVIDIA/NVFlare/issues/4443,SB.Data flow Bug,Absence of type checking,Crash,"BT:  mask type conversion incorrect
+RC: didn't check mask type 
+ET: Throws AttributeError"
+https://github.com/unslothai/unsloth/issues/5027,SB.Logic Bugs,Incorrect Model Parameter or Structure (IPS),Crash,"BT: Missed some implementation in the header of the model
+RC: Header not correctly implemented
+ET: Throws NotImplementedError"
+https://github.com/vllm-project/vllm/issues/39809,SB.Control and Sequence Bug,Others,Crash,"BT: added addtional if block
+RC: Not reladed to DL
+ET: Throws RuntimeError: split_with_sizes expects split_sizes to sum exactly to 512"
+https://github.com/pytorch/executorch/issues/18873,API Bug,API Misuse (APIM),Incorrect Functionality,"BT: generate_8bit_table_values used incorrect function for the task
+RC: wrong function sued 
+ET: uses an invalid int8 input code"
+https://github.com/roboflow/rf-detr/issues/965,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: added additioinal if checks
+RC: missed _ckpt_proj_w type checking
+ET: patch_size change"
+https://github.com/vllm-project/vllm-omni/issues/2793,Initialization Bug,API Misuse (APIM),Memory Out of Bound,"BT: incorrectly initialized
+RC: passed incorrect parameters
+ET: OOM when inputting 20 images"
+https://github.com/open-edge-platform/training_extensions/issues/6106,SB.Control and Sequence Bug,Others,Crash,"BT: added conditional checks 
+RC:  not related to DL
+ET: Throws RuntimeError: release unlocked lock"
+https://github.com/intel/intel-xpu-backend-for-triton/issues/6659,Initialization Bug,Others,Crash,"BT: GIT_TAG inccorrectly initialized
+RC: Not related to DL
+ET: RuntimeError: ZE_RESULT_ERROR_INVALID_MODULE_UNLINKED"
+https://github.com/deepspeedai/DeepSpeed/issues/7972,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT:  added if check
+RC: torch_arch_list type not checked 
+ET: wrong -gencode flags"
+https://github.com/roboflow/rf-detr/issues/963,Initialization Bug,Unaligned Tensor (UT),Crash,"BT: detections.data[""source_shape""] incorrectly initialized
+RC: data not correct
+ET: Throws TypeError"
+https://github.com/mir-group/nequip/issues/592,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: Added additional if block
+RC: Added weight_index_slices and index_slice_data type checker 
+ET: Throws _pickle.PicklingError"
+https://github.com/unslothai/unsloth/issues/4997,API Bug,API Change (APIC),Crash,"BT: kernels api version incorrect
+RC: API version changed
+ET: Throws  Validation error"
+https://github.com/tenstorrent/tt-xla/issues/4223,Initialization Bug,API Misuse (APIM),Crash,"BT: AutoModelForImageTextToText.from_pretrained incorrectly initialized
+RC:  AutoModelForImageTextToText api incorrectly used
+ET: Throws KeyError"
+https://github.com/zaochuan5854/ComfyUI-TensorRT-Reforge/issues/18,Initialization Bug,API Misuse (APIM),Crash,"BT:  build_onnx_tracing_model incorrectly initialized
+RC: build_onnx_tracing_model api misuesd
+ET: Throws AssertionError"
+https://github.com/ooples/AiDotNet.Tensors/issues/148,Processing Bug,Structure Inefficiency (SI),Bad Performance,"BT: Backward proceesing incorrect
+RC: Backward propagation is ineffecient
+ET: Output is slow"
+https://github.com/zaochuan5854/ComfyUI-TensorRT-Reforge/issues/12,API Bug,Absence of inter API compatibility,Crash,"BT:  ONNX Export cannot run while Dynamic VRAM is enabled
+RC: ONNX does not work with vram 
+ET: Throws ConversionError"
+https://github.com/Project-MONAI/MONAI/issues/8820,SB.Logic Bugs,API Misuse (APIM),Incorrect Functionality,"BT: SSIMLoss.forward not correctly printed
+RC: The loss function API is used incorrectly
+ET: Print incorrect value"
+https://github.com/innat/medic-ai/issues/89,API Bug,Absence of inter API compatibility,Incorrect Functionality,"BT: API incompatible
+RC: Not compatible with ONNX format
+ET: breaks ONNX export"
+https://github.com/huggingface/diffusers/issues/13439,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: latent_mask incorrectly initialized
+RC: torch.zeros api misued
+ET: image conditioning preprocessed at latent resolution instead of pixel resolution"
+https://github.com/sgl-project/sglang/issues/22510,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: New control sequence added
+RC: self.tokenizer_manager.server_args.incremental_streaming_output type not checked
+ET:  returns broken in Gemma"
+https://github.com/NVIDIA/nvalchemi-toolkit-ops/issues/63,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: state incorrectly initialized
+RC: _state_registry api misused
+ET: Returns no autograd formula was registered"
+https://github.com/NVIDIA/nvalchemi-toolkit/issues/62,NMSB.Logic Bugs,Others,Crash,"BT: for loop logic incorrect
+RC: not related to dl
+ET: Throws RuntimeError"
+https://github.com/pytorch/pytorch/issues/179821,API Bug,API Change (APIC),Crash,"BT: Pytorch version mismatch
+RC: API version incorrect
+ET: Throws ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE"
+https://github.com/tenstorrent/tt-xla/issues/4185,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: Datatype checker if is incorrect
+RC: type not checked correctly
+ET: clip-Large_Patch14_336 variant fails with PCC=0.9574742356215242"
+https://github.com/CAREamics/careamics/issues/881,API Bug,API Misuse (APIM),Crash,"BT: issue in save_hyperparameters api
+RC: incorrect api used 
+ET: Throws KeyError"
+https://github.com/vllm-project/vllm/issues/39341,Initialization Bug,Absence of type checking,Crash,"BT: runtime_shape and range_entry initialized without check
+RC: added additional check condition for sym_shape_indices  
+ET: Throws IndexError"
+https://github.com/NVIDIA/cuEquivariance/issues/267,API Bug,Absence of inter API compatibility,Crash,"BT: SegmentedPolynomialFromUniform1dJit api issue
+RC: code not compatible with SegmentedPolynomialNaive
+ET: Throws TypeError"
+https://github.com/ultralytics/yolov5/issues/13642,API Bug,API Change (APIC),Unknown,"BT: Depricated API used
+RC: API updated to new version
+ET: Simple UserWarning. Not specified details"
+https://github.com/ultralytics/yolov5/issues/13629,Processing Bug,Structure Inefficiency (SI),Bad Performance,"BT: the activate layer have changed to ReLU
+RC: Wong model structure
+ET: mAP is very low after a few training epochs"
+https://github.com/ultralytics/yolov5/issues/13625,API Bug,API Change (APIC),Crash,"BT:  conflicting pathlib installations
+RC: API requirements changed
+ET: Throws ModuleNotFoundError"
+https://github.com/ultralytics/yolov5/issues/13523,API Bug,API Change (APIC),Unknown,"BT: albumentations api version issue
+RC: albumentations api changed 
+ET: Not specified"
+https://github.com/ultralytics/yolov5/issues/13508,API Bug,API Change (APIC),Crash,"BT: Did not follow latest API instruction
+RC: Used old API 
+ET: aise Exception(s) from e
+Exception: cannot instantiate 'PosixPath' on your system."
+https://github.com/ultralytics/yolov5/issues/13508,API Bug,API Change (APIC),Crash,"BT: Did not follow latest API instruction
+RC: Used old API 
+ET: aise Exception(s) from e
+Exception: cannot instantiate 'PosixPath' on your system."
+https://github.com/ultralytics/yolov5/issues/13498,API Bug,API Change (APIC),Crash,"BT:  Pillow versions above 9.5 have removed the getsize method
+RC: New API changed 
+ET: Throws AttributeError"
+https://github.com/ultralytics/yolov5/issues/13398,API Bug,API Change (APIC),Crash,"BT: Older API used
+RC: API changed in new version
+ET: backend fallback issue"
+https://github.com/ultralytics/yolov5/issues/13360,API Bug,API Change (APIC),Crash,"BT: Older API used
+RC: API changed in new version
+ET: trtexec --onnx=yolov5m.onnx --minShapes=images:1x3x640x640 --optShapes=images:10x3x640x640 --maxShapes=images:10x3x640x640 --saveEngine=yolov5m.engine --fp16"
+https://github.com/ultralytics/yolov5/issues/13335,API Bug,API Change (APIC),Crash,"BT: YOLO V8 worked
+RC: Old API has issue
+ET: Throws KeyError"
+https://github.com/ultralytics/yolov5/issues/13302,API Bug,API Change (APIC),Crash,"BT: YOLO and Pytorch version issue
+RC: API version changed
+ET: Throws RuntimeError"
+https://github.com/ultralytics/yolov5/issues/13293,API Bug,API Change (APIC),Crash,"BT: Python version issue
+RC: Functionality changed in new version
+ET: Throws OSError"
+https://github.com/ultralytics/yolov5/issues/13291,SB.Logic Bugs,Absence of inter API compatibility,Crash,"BT: Wrong model selected 
+RC: YOLOv8 models are not compatible with YOLOv5
+ET: Fhrows FileNotFoundError"
+https://github.com/sdv-dev/SDGym/issues/589,API Bug,API Change (APIC),Crash,"BT:   boot_image incorrect
+RC: New API issue
+ET: RealTabFormerSynthesizer crashes"
+https://github.com/gc-os-ai/pyaptamer/issues/324,SB.Data flow Bug,Confusion with Computation Model (CCM),Incorrect Functionality,"BT: candidate and result data changes
+RC: code not compatible with mcts.run output format
+ET:  two identical sequences with different tensor objects are treated as distinct entries"
+https://github.com/vllm-project/vllm-omni/issues/2580,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: serving_speech controll flow incorrect
+RC: serving_speech type not check 
+ET: Throws AttributeError"
+https://github.com/vllm-project/vllm/issues/39261,Initialization Bug,API Misuse (APIM),Crash,"BT: current_pretokenizer and tokenizer incorrectly initialized
+RC: incorrectly api used to intialize values
+ET: Throws AssertionError"
+https://github.com/huggingface/transformers/issues/45305,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: self.accelerator.distributed_type if condition added 
+RC: self.accelerator.distributed_type value not checked
+ET:  Gradient norms and loss curves should be identical"
+https://github.com/vllm-project/vllm/issues/39244,NMSB.Logic Bugs,Absence of type checking,Incorrect Functionality,"BT: Certain values are constant
+RC: Values types not checked
+ET: CUDA illegal memory access"
+https://github.com/ultralytics/ultralytics/issues/24151,Initialization Bug,Absence of type checking,Crash,"BT: object state is reconstructed from a checkpoint
+RC:  attribute type not checked
+ET: Throws AttributeError"
+https://github.com/unslothai/unsloth/issues/4900,API Bug,API Change (APIC),Crash,"BT: torchcodec version issue
+RC:  api version changed the code
+ET: Throws fails to check dataset format error"
+https://github.com/ogx-ai/ogx/issues/5464,Initialization Bug,Absence of type checking,Crash,"BT:   tool_call_dict[""function""][""arguments""] incorrectly initialized
+RC: data type not checked
+ET: throws JSONDecodeError"
+https://github.com/vllm-project/vllm/issues/39198,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: if block incorrect
+RC: type checking logic incorrect
+ET: throws HFValidationError"
+https://github.com/unslothai/unsloth/issues/4896,API Bug,Absence of inter API compatibility,Crash,"BT: GB10 issue. API not compatible 
+RC:  API not compatible
+ET: Throws list index out of range error"
+https://github.com/ModelCloud/GPTQModel/issues/2678,Initialization Bug,Absence of inter API compatibility,Memory Out of Bound,"BT: results incorrectly initialized 
+RC: unified strategy not implemented
+ET: Quantilze Qwen3.5 27B OOM"
+https://github.com/vllm-project/vllm/issues/39179,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: added additional if block
+RC: e_score_correction_bias type not checked
+ET: generates garbage output"
+https://github.com/vllm-project/vllm/issues/39174,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  added addtitional if block 
+RC: inputs_embeds_scheduled.shape[0] value not checked
+ET: Crash on Transcription"
+https://github.com/vllm-project/vllm/issues/39163,Initialization Bug,Others,Bad Performance,"BT: new data initialized
+RC: not related to dl
+ET: 43 seconds slower."
+https://github.com/verl-project/verl/issues/5894,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: added conditional checks for score_mean, max and min
+RC: added a checker
+ET: Throws RuntimeError"
+https://github.com/verl-project/verl/issues/5893,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: added checker for empty response
+RC: Added response checker 
+ET: Throws RuntimeError"
+https://github.com/tenstorrent/tt-xla/issues/4134,Initialization Bug,Incorrect Model Parameter or Structure (IPS),Crash,"BT: model_kwargs incorrectly initialized
+RC:  model parameter incorrect
+ET: Throws AttributeError"
+https://github.com/sktime/pytorch-forecasting/issues/2251,API Bug,API Misuse (APIM),Crash,"BT: Wrong API name
+RC: Incorrect API used for reset
+ET: Throws AttributeError"
+https://github.com/isayevlab/aimnetcentral/issues/54,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: added additional if check on data[k]
+RC: data[k] type checked
+ET: breaks autograd graph"
+https://github.com/pyscf/gpu4pyscf/issues/728,API Bug,API Misuse (APIM),Incorrect Functionality,"BT: wrong api used for out
+RC: incorrect api used
+ET: produces wrong J matrix"
+https://github.com/pyscf/gpu4pyscf/issues/726,Initialization Bug,Unknown,Crash,"BT: s and cgto incorrectly initialized 
+RC:  not related to dl
+ET: Throws CUDA_ERROR_ILLEGAL_ADDRESS"
+https://github.com/vllm-project/vllm-omni/issues/2529,Initialization Bug,Incorrect Model Parameter or Structure (IPS),Incorrect Functionality,"BT: argument values incorrect
+RC: not related to dl
+ET: Omni object has no effect."
+https://github.com/tenstorrent/tt-xla/issues/4132,Initialization Bug,Confusion with Computation Model (CCM),Crash,"BT: model_kwargs incorrectly initialized
+RC:  model parameters incorrect
+ET: Throws TypeError"
+https://github.com/vllm-project/vllm/issues/39089,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: API called with incorrect args
+RC:  incorrect arguments passed to _parse_gemma4_args
+ET:  tool-call-parser corrupts boolean values in tool call arguments"
+https://github.com/sktime/sktime/issues/9827,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: if checker added in key
+RC: key data type not checked 
+ET: Throws AttributeError"
+https://github.com/HPE/torch-hammer/issues/19,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: if condition incorrect
+RC: is_ep_comm type not checked
+ET: Throws RuntimeError"
+https://github.com/jundot/omlx/issues/623,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: Configuration and aggregation logics were incorrect
+RC: Not a DL part 
+ET: Both GEMM entries run as float32"
+https://github.com/pytorch/pytorch/issues/179418,Initialization Bug,API Misuse (APIM),Crash,"BT:  make_fallback incorrectly initialized
+RC: make_fallback got incorrect arguments
+ET: Throws _inductor.exc.InductorError"
+https://github.com/Saganaki22/ComfyUI-OmniVoice-TTS/issues/13,NMSB.Logic Bugs,Others,Crash,"BT: Functions are decorated before signature inspection
+RC: Not related to DL
+ET: Throws typeerror"
+https://github.com/Saganaki22/ComfyUI-OmniVoice-TTS/issues/12,API Bug,API Change (APIC),Crash,"BT: got it working by upgrading transformers to 5.3
+RC: API version changed 
+ET: everything gets copied to the custom node folder but the nodes still show red in ComfyUI."
+https://github.com/vllm-project/vllm/issues/39025,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: Certain if logics incorrect
+RC:  checker if incorrect
+ET: Throws torch.AcceleratorError"
+https://github.com/Comfy-Org/comfy-cli/issues/412,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: Loop logic incorrect
+RC:  Not related to DL
+ET: Can't check torch version after installing"
+https://github.com/vllm-project/vllm/issues/39017,Initialization Bug,Others,Crash,"BT: Missed initialization and if else check
+RC: Not related to dl
+ET: Throws _pydantic_core.ValidationError"
+https://github.com/huggingface/transformers/issues/45242,SB.Control and Sequence Bug,Absence of type checking,Data Corruption,"BT: some if else statement incorrect
+RC: is_kv_shared_layer checker not added
+ET: producing garbage logit"
+https://github.com/intel/intel-xpu-backend-for-triton/issues/6565,API Bug,API Change (APIC),Crash,"BT: Pytorch api issue
+RC: API version changed 
+ET: Throws triton.runtime.errors.IntelGPUError"
+https://github.com/ooples/AiDotNet.Tensors/issues/98,API Bug,Absence of inter API compatibility,Incorrect Functionality,"BT: --enable_chunked_prefill is not supported yet for qwen3.5
+RC: API not compatible for this task
+ET: returns ""!"""
+https://github.com/vllm-project/vllm/issues/38982,NMSB.Logic Bugs,Others,Crash,"BT: Import statement incorrect
+RC: Not related to DL
+ET: Throws ModuleNotFoundError"
+https://github.com/pytorch/ignite/issues/3718,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: extra if else added 
+RC: top_k  type not checked 
+ET: Throws IndexError"
+https://github.com/materialsproject/atomate2/issues/1451,API Bug,Others,Crash,"BT: API version incorrect
+RC: Not related to DL
+ET: Throws ResolutionImpossible"
+https://github.com/sktime/sktime/issues/9798,NMSB.Logic Bugs,Others,Crash,"BT:  added checker _check_estimator_deps
+RC: Not related to dl
+ET: Throws ModuleNotFoundError"
+https://github.com/vllm-project/vllm/issues/38894,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: If statement incorrect 
+RC: enable_thinking checker added
+ET:  only output content in reasoning field"
+https://github.com/unslothai/unsloth/issues/4809,Initialization Bug,Others,Incorrect Functionality,"BT: Certain path and variable incorrectly initialized
+RC: Not related to DL
+ET: First tool call in a new Studio chat starts outside the session sandbox"
+https://github.com/huggingface/transformers/issues/45198,Initialization Bug,API Misuse (APIM),Crash,"BT: Wrong API used to innitialize phonemes
+RC:  Wrong API used
+ET: eturn_token_type_ids=True crashes"
+https://github.com/vllm-project/vllm/issues/38837,Initialization Bug,API Misuse (APIM),Crash,"BT: init missed tool
+RC: API misued in init
+ET: Throws 400 Gemma4ToolParser error"
+https://github.com/zerfoo/zerfoo/issues/317,API Bug,Absence of inter API compatibility,Crash,"BT: API version issue
+RC: API version changed
+ET: Throws cudaMemcpy failed"
+https://github.com/Project-MONAI/MONAI/issues/8802,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: added if checker 
+RC: label_tensor checker added
+ET: ImageStats crashes"
+https://github.com/roboflow/rf-detr/issues/913,SB.Logic Bugs,Incorrect Model Parameter or Structure (IPS),Incorrect Functionality,"BT: Model classification logic incorrect
+RC: Classification head not correctly build
+ET: model predicts class_id as 1"
+https://github.com/ultralytics/ultralytics/issues/24100,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: enumerate logic icorrect
+RC: Not realted to DL 
+ET:  Mask discarded"
+https://github.com/verl-project/verl/issues/5859,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: Conditional block addded
+RC: Added a type checker 
+ET: Throws RuntimeError"
+https://github.com/inclusionAI/AReaL/issues/1132,Initialization Bug,Others,Crash,"BT: VALID_MOE_MODELS incorrectly initialized
+RC: Not related to dl
+ET: Throws AttributeError"
+https://github.com/sgl-project/sglang/issues/21911,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: torch.distributed.new_group method incorrectly initialized
+RC: torch.distributed.new_group api misued 
+ET: imeout is only applied to init_process_group,"
+https://github.com/microsoft/VibeVoice/issues/312,Initialization Bug,Others,Crash,"BT: seq_length and query_length incorrectly initialized
+RC: Not related to DL
+ET: TTS crashes"
+https://github.com/runpod/containers/issues/114,API Bug,API Change (APIC),Unknown,"BT: Wrong version
+RC: API version changed
+ET: Not specified"
+https://github.com/TorchIO-project/torchio/issues/1440,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: if block added
+RC: first_element checker added
+ET:  collates scalar metadata as plain Python lists"
+https://github.com/PriorLabs/TabPFN/issues/850,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: certain kwags and parameters incorrect 
+RC: API called with wrong argument
+ET: silently produces wrong predictions"
+https://github.com/vllm-project/vllm/issues/38717,Initialization Bug,API Misuse (APIM),Crash,"BT: chunk_str incorrectly initialized
+RC: wrong API used
+ET: Throws UnicodeDecodeError"
+https://github.com/vllm-project/vllm-omni/issues/2395,Initialization Bug,Others,Incorrect Functionality,"BT: Promt and certain variables incorrectly initialized 
+RC: Not a DL issue 
+ET: When an invalid speaker is entered, no prompt message"
+https://github.com/ultralytics/ultralytics/issues/24079,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: if logic incorrect 
+RC: type checker added for v
+ET: resume training broken"
+https://github.com/pytorch/pytorch/issues/178871,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: if condition incorrect
+RC: mask_constant_index checked 
+ET: Incorrect output for non-power-of-2-sized fusion"
+https://github.com/torch-spyre/torch-spyre/issues/1289,NMSB.Logic Bugs,Others,Crash,"BT: Return logic incorrect
+RC: Not a DL issue
+ET: Throws InductorError"
+https://github.com/huggingface/lerobot/issues/3251,NMSB.Logic Bugs,Others,Bad Performance,"BT: Delete logic added
+RC: Not DL issue
+ET: Takes large memory"
+https://github.com/isaac-sim/IsaacLab/issues/5132,API Bug,Absence of inter API compatibility,Crash,"BT: This is currently a known limitation
+RC: API not compatible with multi-gpu system
+ET: Throws unrecognized arguments: --/plugins/carb.tasking.plugin/threadCount=12"
+https://github.com/awslabs/awsome-distributed-training/issues/1047,API Bug,API Change (APIC),Crash,"BT: Version incorrect
+RC: PyTorch API changed
+ET: Throws RuntimeError"
+https://github.com/huggingface/pytorch-image-models/issues/2687,API Bug,API Change (APIC),Crash,"BT:  It was fixed on the PyTorch side
+RC: PyTorch API changed
+ET: Throws TypeError"
+https://github.com/sktime/pytorch-forecasting/issues/2246,Initialization Bug,Others,Unknown,"BT: n_plotting_samples initialization logic incorrect
+RC: not related to DL
+ET: Not Specified"
+https://github.com/pytorch/pytorch/issues/178769,API Bug,API Misuse (APIM),Incorrect Functionality,"BT: API got wrong argument
+RC: assertEqual matching with incorrect value
+ET: Returns incorrect result"
+https://github.com/NVIDIA/nvalchemi-toolkit-ops/issues/49,SB.Data flow Bug,Unaligned Tensor (UT),Crash,"BT:  Data shape issue
+RC: reshaper added to make the tensor size correct
+ET: returns incorrect virial shape"
+https://github.com/sgl-project/sglang/issues/21688,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: condition added
+RC: Spefic type checker added
+ET: Not support streaming image processing"
+https://github.com/ultralytics/ultralytics/issues/24064,API Bug,API Misuse (APIM),Bad Performance,"BT: augment-heavy features disabled, e.g. mosaic=0, mixup=0, copy_paste=0, cache=False, and amp=False
+RC: API arguments not passed correctly
+ET: Memory consumption high"
+https://github.com/huggingface/lerobot/issues/3247,API Bug,API Change (APIC),Bad Performance,"BT: an issue with the recent transformers version 
+RC: API changed in the new version
+ET:  0% success rate"
+https://github.com/ENPICOM/immunum/issues/42,API Bug,API Misuse (APIM),Incorrect Functionality,"BT: imp.number api invoked with incorrect parameter and some logic incorrect
+RC: API got incorrect parameters
+ET: Not specified"
+https://github.com/inclusionAI/AReaL/issues/1103,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  Additional if block added
+RC: Checker added for padding length
+ET: Throws RuntimeError"
+https://github.com/Comfy-Org/ComfyUI/issues/13214,NMSB.Logic Bugs,Others,Crash,"BT: Code order icorrect
+RC: Not related to DL
+ET:  Throws RuntimeError"
+https://github.com/vllm-project/vllm-omni/issues/2304,Initialization Bug,Others,Crash,"BT: spk_id_map and spk_id incorrectly initialized
+RC: Not a part of DL
+ET: Throws ValueError"
+https://github.com/mllam/neural-lam/issues/526,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: torch.sqrt and pred_std incorrectly initialized
+RC: torch.sqrt api misuesd
+ET:  ignore pred_std during ensemble generation"
+https://github.com/ace-step/ACE-Step-1.5/issues/950,NMSB.Logic Bugs,Others,Incorrect Functionality,"BT: Certain non-model logic not implemented
+RC: Not related to DL
+ET: Cannot start acestep"
+https://github.com/huggingface/transformers/issues/45072,Initialization Bug,API Misuse (APIM),Data Corruption,"BT: router_logits and pixel_values incorrectly initialized
+RC: pixel_values.to and self.classifier API misused
+ET: dtype mismatches"
+https://github.com/awslabs/awsome-distributed-training/issues/1041,NMSB.Logic Bugs,API Misuse (APIM),Memory Out of Bound,"BT: missed specific logical operation
+RC: torch.cuda.set_device api work added
+ET:  all workers default to GPU 0"
+https://github.com/FluidInference/FluidAudio/issues/445,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT: certain conditional check deleted and added
+RC: multiArrayValue checker added
+ET: audio is scratchy/distorted with raw noise"
+https://github.com/vllm-project/vllm/issues/38347,Data Bug,Others,Hang,"BT: User's input context is large
+RC: Not a DL issue
+ET: stuck after long time running"
+https://github.com/huggingface/lerobot/issues/3227,NMSB.Logic Bugs,API Misuse (APIM),Incorrect Functionality,"BT: new_info creation process logic incorrect
+RC: API invoked in incorrect sequence
+ET: flag gets overwritten"
+https://github.com/candle-org/candle/issues/273,NMSB.Logic Bugs,Others,Crash,"BT: Added specific non-model logics
+RC: Not related to DL
+ET: matmul backward crashes"
+https://github.com/pytorch/tensordict/issues/1667,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT: a new checker added
+RC: HigherOrderOperator type checker added
+ET: Throws UncapturedHigherOrderOpError"
+https://github.com/kornia/kornia/issues/3670,API Bug,API Misuse (APIM),Incorrect Functionality,"BT: Wrong api invoked
+RC: Wrong API
+ET:  leaves the Red and Blue channels flipped"
+https://github.com/lucidrains/vit-pytorch/issues/359,API Bug,API Misuse (APIM),Crash,"BT: torch.randn api incorrectly invoked
+RC: Wrong parameter passed 
+ET:  Throws RuntimeError"
+https://github.com/lucidrains/vit-pytorch/issues/358,API Bug,API Misuse (APIM),Unknown,"BT: topk (wrong) api used
+RC: Non-deterministic API used 
+ET: crashes or produces NaN gradients."
+https://github.com/vllm-project/vllm/issues/45071,API Bug,API Misuse (APIM),Crash,"BT: torch.compile api misused
+RC:  sequence_lengths parameter not passed
+ET:  Throws RuntimeError"
+https://github.com/ultralytics/ultralytics/issues/24771,API Bug,API Misuse (APIM),Crash,"BT:  onnx.save api misused
+RC: calibration_data not passed
+ET: TensorRT error"
+https://github.com/p-e-w/heretic/issues/371,API Bug,API Change (APIC),Crash,"BT:  API version incorrect
+RC:  API changed in the new version
+ET:  Throws ValueError"
+https://github.com/unslothai/unsloth-zoo/issues/737,NMSB.Logic Bugs,Absence of inter API compatibility,Crash,"BT:  Function not implemented
+RC:  Required function not implemeted to make it compatible 
+ET:  Throws AttributeError"
+https://github.com/huggingface/transformers/issues/46515,API Bug,API Change (APIC),Crash,"BT: pytorch version changed 
+RC:  pytorch API changed
+ET: Throws AttributeError"
+https://github.com/synapt-dev/recall/issues/827,Initialization Bug,Absence of type checking,Crash,"BT: _device incorrectly initialized
+RC:  _device type checker not added
+ET:  Hard crash"
+https://github.com/mir-group/nequip/issues/601,Initialization Bug,API Misuse (APIM),Crash,"BT:  cell value incorrectly initialized
+RC:  cell.contiguous api not invoked
+ET:  Throws RuntimeError"
+https://github.com/scikit-hep/coffea/issues/1568,Initialization Bug,API Misuse (APIM),Crash,"BT:  arr not converted for gpu 
+RC:  to method not invoked 
+ET:  Throws  PyTorch error"
+https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/issues/969,NMSB.Logic Bugs,Absence of type checking,Crash,"BT: some logical checkers missed
+RC: added checker for config_requests_mlflow
+ET: Throws ModuleNotFoundError"
+https://github.com/ultralytics/ultralytics/issues/24737,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT:  pbar.set_description api misured
+RC:  batch size parameter incorrectly passed
+ET:  batch size value incorrect"
+https://github.com/KeWu5678/NNforHJB/issues/16,NMSB.Logic Bugs,Absence of inter API compatibility,Memory Out of Bound,"BT: Missed some logical implementation 
+RC: Replace functional.jacobian (O(N·d·P) tape) with closed-form chain-rule
+ET:  Throws OOMs"
+https://github.com/unslothai/unsloth/issues/6089,NMSB.Logic Bugs,API Misuse (APIM),Crash,"BT:  Returned iterator instead of iterating through the elements
+RC: wrong api (iter) used
+ET:  Throws ValueError"
+https://github.com/vllm-project/vllm-omni/issues/4247,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  logical checker issue
+RC: norm checker added 
+ET: Throws RuntimeError"
+https://github.com/intel/torch-xpu-ops/issues/3889,NMSB.Logic Bugs,Absence of inter API compatibility,Crash,"BT: Missed logical steps
+RC: prepacked linear requires XNNPACK support
+ET:  Throws AttributeError"
+https://github.com/tile-ai/tilelang/issues/2352,NMSB.Logic Bugs,Others,Crash,"BT:  Logical process after if detect_inplace incorrect
+RC: Testing code
+ET:  Throws error ""CUDA"
+https://github.com/PriorLabs/tabpfn-extensions/issues/307,Initialization Bug,Unaligned Tensor (UT),Incorrect Functionality,"BT: y_fit incorrectly initialized
+RC: X_fit index incorrect
+ET:  the wrong density is computed silently"
+https://github.com/Haoming02/sd-webui-forge-classic/issues/1205,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  Added checker for gradient
+RC: Added conditional checks 
+ET:  Throws AttributeError"
+https://github.com/debpalash/OmniVoice-Studio/issues/283,NMSB.Logic Bugs,Absence of type checking,Crash,"BT:  Added logical checker
+RC: Added type checking for tqdm
+ET:  Throws OSError"
+https://github.com/Lightning-AI/pytorch-lightning/issues/21757,Initialization Bug,API Misuse (APIM),Crash,"BT:   restore function incorrectly initialized
+RC:  _checkpoint_connector.restore api misused
+ET:  Throws UnpicklingError"
+https://github.com/apache/tvm/issues/19676,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  added conditional check
+RC:  ndim checker added
+ET:  Throws InternalError"
+https://github.com/sktime/sktime/issues/10326,API Bug,API Change (APIC),Crash,"BT:  API version issue
+RC:  API changed in new version
+ET:  Throws error"
+https://github.com/keras-team/keras/issues/23038,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT:  added conditional checker
+RC:  added type checker for use_causal_mask
+ET:  Drops casual masks"
+https://github.com/Comfy-Org/ComfyUI/issues/14285,Initialization Bug,API Misuse (APIM),Crash,"BT:  self.embed_image_indicator incorrectly initialized
+RC:  some APIs like self.embed_image_indicator and _img_to_tokens misused
+ET:  throws NotImplementedError"
+https://github.com/huggingface/sentence-transformers/issues/3795,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:  checker condition incorrect
+RC:  added checker torch.distributed.is_available()
+ET:  Throws AttributeError"
+https://github.com/cedanl/edusynth/issues/10,SB.Control and Sequence Bug,Absence of type checking,Crash,"BT:   Condition checker added for synthesizer 
+RC:  Added type check for cfg.synthesizer 
+ET:   CTGANSynthesizer crasht"
+https://github.com/YannikG/lexiflow/issues/47,SB.Control and Sequence Bug,Absence of type checking,Incorrect Functionality,"BT:  added conditional checks for llama_supervisor and embed_supervisor
+RC: few conditinoal checks newly added
+ET:  llama.cpp server exposes POST /v1/embeddings"
+https://github.com/unslothai/unsloth/issues/6004,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: AUDIO_TOKENS list with Gemma 4's <|audio|> placeholder token (placeholder token worngly initialized)
+RC: tokenizer.convert_tokens_to_ids api misused
+ET: ignores audio content parts"
+https://github.com/torch-spyre/spyre-inference/issues/230,NMSB.Logic Bugs,Others,Crash,"BT: Removes some unnecessary logical check
+RC: None of the categories applies
+ET:  server crashes"
+https://github.com/RL-Align/RL-Kernel/issues/78,Initialization Bug,API Misuse (APIM),Incorrect Functionality,"BT: some values like candidateReviewers and dummy incorrectly initialized
+RC: torch.randn api misused
+ET: produce incorrect measurements"
+https://github.com/huggingface/diffusers/issues/13864,NMSB.Logic Bugs,Absence of type checking,Crash,"BT:  logical checker incorrect
+RC: safety_checker instance checker incorect 
+ET: Throws AttributeError"
+https://github.com/NVlabs/curobo/issues/676,NMSB.Logic Bugs,Absence of type checking,Incorrect Functionality,"BT:  added logical checker
+RC: added axis and joint_idx checker 
+ET: URDF should be kinematically identical to the source"
